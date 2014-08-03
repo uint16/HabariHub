@@ -3,6 +3,7 @@ package com.tanzoft.habarihub.fragments;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.util.Log;
@@ -14,6 +15,8 @@ import android.widget.Toast;
 import com.tanzoft.habarihub.HabariHubApplication;
 import com.tanzoft.habarihub.R;
 import com.tanzoft.habarihub.datamodels.NewsSource;
+import com.tanzoft.habarihub.rss.FeedSearch;
+import com.tanzoft.habarihub.rss.FeedSearchFragment;
 
 public class SubscriptionDialog extends DialogFragment {
 
@@ -27,47 +30,18 @@ public class SubscriptionDialog extends DialogFragment {
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
         final View view = inflater.inflate(R.layout.subscription_dialog, null);
-        final EditText sourceName = (EditText) view.findViewById(R.id.display_name);
-        final EditText sourceUrl = (EditText) view.findViewById(R.id.source_address);
+        final EditText sourceName = (EditText) view.findViewById(R.id.search_feed);
 
         builder.setView(view)
                 .setPositiveButton(R.string.add, new DialogInterface.OnClickListener() {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        source = sourceName.getText().toString();
 
-                        try {
-
-                            source = sourceName.getText().toString();
-                            url = sourceUrl.getText().toString();
-                            final NewsSource newsSource = new NewsSource(source, url);
-
-
-                            //Toast.makeText(getActivity(), source + url, Toast.LENGTH_SHORT).show();
-
-                            new Runnable() {
-
-                                @Override
-                                public void run() {
-
-
-                                    HabariHubApplication.dbHelper.openDatabase();
-
-                                    HabariHubApplication.dbHelper.addBlog(newsSource);
-                                    Log.i("runnable  ", "added");
-
-                                    HabariHubApplication.dbHelper.close();
-                                }
-
-                            }.run();
-
-                        } catch (Exception e) {
-
-                            Toast.makeText(getActivity(), "No Source Was Added", Toast.LENGTH_SHORT).show();
-
-
-                        }
-
+                       Intent intent = new Intent(getActivity(), FeedSearch.class);
+                        intent.putExtra(Intent.EXTRA_TEXT, source);
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {

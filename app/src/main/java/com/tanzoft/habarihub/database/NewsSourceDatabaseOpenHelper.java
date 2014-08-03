@@ -20,6 +20,7 @@ public class NewsSourceDatabaseOpenHelper extends SQLiteOpenHelper {
 	
 	private Context context;
 	private SQLiteDatabase database;
+    private final String LOG_TAG = NewsSourceDatabaseOpenHelper.class.getSimpleName();
 
 	
 	//Name of the database
@@ -77,7 +78,7 @@ public class NewsSourceDatabaseOpenHelper extends SQLiteOpenHelper {
 	public ArrayList<NewsSource> getAllBlogs() {
 		ArrayList<NewsSource> itemList = new ArrayList<NewsSource>();
 		// Select All Query
-		String selectQuery = "SELECT * FROM "+NewsSourceDatabase.DATABASE_TABLE_BLOGS+" ORDER BY "+NewsSourceDatabase.COLUMN_ID+" DESC ";
+		String selectQuery = "SELECT * FROM "+NewsSourceDatabase.DATABASE_TABLE_BLOGS+" ORDER BY "+NewsSourceDatabase.COLUMN_ID+" ASC ";
 		SQLiteDatabase db = this.getWritableDatabase();
 		Cursor cursor = db.rawQuery(selectQuery, null);
 		// looping through all rows and adding to list
@@ -93,7 +94,7 @@ public class NewsSourceDatabaseOpenHelper extends SQLiteOpenHelper {
 				// Adding contact to list
 				itemList.add(item);
 				
-				Log.i("dbhelper ", "blog added");
+				Log.i(LOG_TAG, "blog added");
 
 			} while (cursor.moveToNext());
 
@@ -111,7 +112,7 @@ public class NewsSourceDatabaseOpenHelper extends SQLiteOpenHelper {
 			
 			
 			// Select All Query
-			String selectQuery = "SELECT * FROM "+NewsSourceDatabase.DATABASE_TABLE_NEWSPAPERS+" ORDER BY "+NewsSourceDatabase.COLUMN_ID+" DESC ";
+			String selectQuery = "SELECT * FROM "+NewsSourceDatabase.DATABASE_TABLE_NEWSPAPERS+" ORDER BY "+NewsSourceDatabase.COLUMN_ID+" ASC ";
 			SQLiteDatabase db = this.getWritableDatabase();
 			Cursor cursor = db.rawQuery(selectQuery, null);
 			// looping through all rows and adding to list

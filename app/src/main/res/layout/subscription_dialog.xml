@@ -21,20 +21,13 @@
         android:layout_marginTop="2dp"
         android:layout_marginBottom="2dp"
         android:background="@color/holoblue" />
-        
+
 
     <EditText
-        android:id="@+id/display_name"
+        android:id="@+id/search_feed"
         style="@style/edit_text_dialog"
-        android:hint="@string/source_name"
+        android:hint="@string/feed_search_query"
         android:inputType="text" />
 
-    <EditText
-        android:id="@+id/source_address"
-        style="@style/edit_text_dialog"
-        android:hint="@string/source_url"
-        android:inputType="none" 
-       
-        />
 
 </LinearLayout>

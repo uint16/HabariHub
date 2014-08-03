@@ -7,21 +7,14 @@
     android:orientation="vertical"
     tools:context=".AboutActivity" >
 
-    <com.tanzoft.habarihub.extendedviews.HabariHubTextView
+    <TextView
         android:id="@+id/title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:padding="10dp"
         android:text="@string/about_text"
-        android:textSize="20sp" />
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <it.gmariotti.cardslib.library.view.CardView
-        android:id="@+id/card_developers"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginTop="12dp"/>
 
 </LinearLayout>

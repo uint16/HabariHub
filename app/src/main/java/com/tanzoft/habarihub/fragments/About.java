@@ -18,4 +18,5 @@ public class About extends HabariHubFragmentHandler {
 
         return inflater.inflate(R.layout.about_us_fragment, container, false);
     }
+
 }

@@ -47,6 +47,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.tanzoft.habarihub.HabariHubMainActivity" />
         </activity>
+        <activity
+            android:name=".rss.FeedSearch"
+            android:label="@string/title_activity_feed_search"
+            android:parentActivityName=".HabariHubMainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tanzoft.habarihub.HabariHubMainActivity" />
+        </activity>
     </application>
 
 </manifest>
