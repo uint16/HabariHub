@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center_vertical"
-        android:text="@string/dialogTitle"
+        android:text="@string/dialog_title"
         android:textColor="@color/holoblue"
         android:paddingLeft="20dp"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -32,7 +32,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This feature is under developent, but for the time being the FIRST results is likely what you need"/>
+        android:text="@string/dialog_warning_text"/>
 
 
 </LinearLayout>

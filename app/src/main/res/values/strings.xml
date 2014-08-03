@@ -45,11 +45,12 @@ Visit my Google+ page.Visit my Google+ page.Visit my Google+ page.              
     <string name="view_story">View Story</string>
     <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
     <string name="visit_google_plus">Add Me To Your Google+ Circles</string>
-    <string name="dialogTitle">Add A News Source</string>
+    <string name="dialog_title">Add A News Source</string>
     <string name="feed_search_query">Search Source</string>
     <string name="search">Search</string>
     <string name="cancel">Cancel</string>
     <string name="station_picker_prompt">Choose a Radio Station</string>
     <string name="title_activity_feed_search">FeedSearch</string>
+    <string name="dialog_warning_text">This feature is under developent, but for the time being the FIRST results is likely what you need</string>
 
 </resources>
