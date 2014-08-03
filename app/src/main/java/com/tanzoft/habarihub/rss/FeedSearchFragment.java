@@ -13,8 +13,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.tanzoft.habarihub.R;
 
@@ -40,6 +42,7 @@ public class FeedSearchFragment extends Fragment {
     private final String LOG_TAG = FeedSearchFragment.class.getSimpleName();
 
     ArrayAdapter<String> adapter = null;
+    ArrayList<String> feedEntry = new ArrayList<String>();
 
     public FeedSearchFragment() {
 
@@ -62,6 +65,15 @@ public class FeedSearchFragment extends Fragment {
         ListView feed_list = (ListView) rootView.findViewById(R.id.listview_feed);
         feed_list.setAdapter(adapter);
 
+        feed_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String source = feedEntry.get(position);
+                String[] temp = source.split("%");
+                Toast.makeText(getActivity(), temp[0], Toast.LENGTH_LONG).show();
+            }
+        });
+
         return rootView;
     }
 
@@ -70,7 +82,7 @@ public class FeedSearchFragment extends Fragment {
         if(!search.isEmpty()) {
             task.execute(search);
         } else {
-            task.execute("engadget");
+            Toast.makeText(getActivity(), "Please Enter something to Search", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -155,10 +167,11 @@ public class FeedSearchFragment extends Fragment {
 
                 for(int i = 0; i < feedResults.length(); i++){
                     JSONObject obj = feedResults.getJSONObject(i);
-                  //  String url = obj.getString(URL);
+                    String url = obj.getString(URL);
                     String title = obj.getString(TITLE);
 
                     res[i] = title;
+                    feedEntry.add(url + SEPARATOR + title);
                 }
 
             return res;
