@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import com.tanzoft.habarihub.R;
 import com.tanzoft.habarihub.datamodels.NewsSource;
-import com.tanzoft.habarihub.extendedviews.HabariHubTextView;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 public class NewsAdapter extends ArrayAdapter<NewsSource> {
 	
@@ -38,10 +38,10 @@ public class NewsAdapter extends ArrayAdapter<NewsSource> {
 		if(row == null)
 		{
 			LayoutInflater inflater = (LayoutInflater)context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-			row = inflater.inflate(R.layout.source_item, parent, false);
+			row = inflater.inflate(R.layout.source_list_item, parent, false);
 			holder = new ViewHolder();
 
-			holder.sourceName = (HabariHubTextView)row.findViewById(R.id.source_title);
+			holder.sourceName = (TextView)row.findViewById(R.id.source_title);
 			
 			row.setTag(holder);
 		}
@@ -63,7 +63,7 @@ public class NewsAdapter extends ArrayAdapter<NewsSource> {
 		 * Improves scrolling performance by avoiding findViewById(int t) 
 		 * each time the view goes away from the screen
 		 * */
-		HabariHubTextView sourceName;
+		TextView sourceName;
 	
 	}
 

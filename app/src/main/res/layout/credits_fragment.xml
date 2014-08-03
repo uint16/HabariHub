@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:background="@color/background_holo_light" >
 
-    <com.tanzoft.habarihub.extendedviews.HabariHubTextView
+    <TextView
         android:id="@+id/code_credits"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

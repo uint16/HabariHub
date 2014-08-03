@@ -5,16 +5,15 @@
     android:background="@color/background_holo_light"
     android:orientation="vertical" >
 
-    <com.tanzoft.habarihub.extendedviews.HabariHubTextView
+    <TextView
         android:id="@+id/dialog_title"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="50dp"
         android:gravity="center_vertical"
         android:text="@string/dialogTitle"
         android:textColor="@color/holoblue"
         android:paddingLeft="20dp"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <View
         android:layout_width="fill_parent"
@@ -24,13 +23,13 @@
         android:background="@color/holoblue" />
         
 
-    <com.tanzoft.habarihub.extendedviews.HabariHubEditText
+    <EditText
         android:id="@+id/display_name"
         style="@style/edit_text_dialog"
         android:hint="@string/source_name"
         android:inputType="text" />
 
-    <com.tanzoft.habarihub.extendedviews.HabariHubEditText
+    <EditText
         android:id="@+id/source_address"
         style="@style/edit_text_dialog"
         android:hint="@string/source_url"

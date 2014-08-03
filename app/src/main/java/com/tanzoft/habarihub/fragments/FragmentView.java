@@ -7,11 +7,11 @@ import android.view.ViewGroup;
 
 public class FragmentView extends HabariHubFragmentHandler {
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-	
-		return null;
-	}
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        return null;
+    }
 
 }

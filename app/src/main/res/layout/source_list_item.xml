@@ -5,14 +5,15 @@
     android:background="@color/background_holo_light"
      >
 
-    <com.tanzoft.habarihub.extendedviews.HabariHubTextView
+    <TextView
         android:id="@+id/source_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:gravity="center_vertical"
-        android:paddingLeft="20dp"
-        android:textSize="20sp" />
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:paddingLeft="20dp"/>
     <!--  -->
 
 </RelativeLayout>
