@@ -14,11 +14,11 @@
         revision="20.0.0"
         sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
     <item
-        dex="/home/damas/Code/HabariHub/app/build/intermediates/pre-dexed/debug/classes-96bb6e30882357e79a42a6540605264af0955a00.jar"
-        jar="/home/damas/Code/HabariHub/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/classes.jar"
+        dex="/home/damas/Code/HabariHub/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-0ef59b563863ebbaee1a8869f6abe2f9a468848c.jar"
+        jar="/home/damas/Products/Android SDK/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef"/>
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
     <item
         dex="/home/damas/Code/HabariHub/app/build/intermediates/pre-dexed/debug/classes-d164fee3de911dabb1b2f0f9d4003fa707fae30f.jar"
         jar="/home/damas/Code/HabariHub/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/library/1.7.3/classes.jar"
@@ -26,10 +26,10 @@
         revision="20.0.0"
         sha1="920a5af52d11dcd83341cecdd8b628cd8db17e56"/>
     <item
-        dex="/home/damas/Code/HabariHub/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-0ef59b563863ebbaee1a8869f6abe2f9a468848c.jar"
-        jar="/home/damas/Products/Android SDK/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        dex="/home/damas/Code/HabariHub/app/build/intermediates/pre-dexed/debug/classes-96bb6e30882357e79a42a6540605264af0955a00.jar"
+        jar="/home/damas/Code/HabariHub/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef"/>
 
 </pre-dex-items>

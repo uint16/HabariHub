@@ -20,6 +20,7 @@ public class BlogsFragment extends HabariHubFragmentHandler {
 
 	ArrayList<NewsSource> newsSource;
 	private ListView listView;
+    private final String LOG_TAG = BlogsFragment.class.getSimpleName();
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,7 +29,7 @@ public class BlogsFragment extends HabariHubFragmentHandler {
 
 		((HabariHubMainActivity)getActivity()).getSupportActionBar().setTitle("Blogs and Sites");
 
-		Log.i("BlogsFra on create view ", " "+newsSource.size());
+		Log.i(LOG_TAG, "Fragment Size: "+ newsSource.size());
 
 		View view = inflater.inflate(R.layout.source_list, container, false);
 
