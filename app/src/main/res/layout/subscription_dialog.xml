@@ -29,5 +29,10 @@
         android:hint="@string/feed_search_query"
         android:inputType="text" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This feature is under developent, but for the time being the FIRST results is likely what you need"/>
+
 
 </LinearLayout>

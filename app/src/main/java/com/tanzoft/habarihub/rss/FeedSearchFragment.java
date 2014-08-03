@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,14 +42,15 @@ public class FeedSearchFragment extends Fragment {
     ArrayAdapter<String> adapter = null;
 
     public FeedSearchFragment() {
+
     }
 
     @Override
-    public void onStart() {
+   public void onStart() {
         super.onStart();
         Intent intent = getActivity().getIntent();
-        String search = intent.getStringExtra(Intent.EXTRA_TEXT);
-        runSearch(search);
+        String searchString = intent.getStringExtra(Intent.EXTRA_TEXT);
+        runSearch(searchString);
     }
 
     @Override
@@ -56,6 +60,7 @@ public class FeedSearchFragment extends Fragment {
 
         adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_feed_result, R.id.list_item_feed_textview, new ArrayList<String>());
         ListView feed_list = (ListView) rootView.findViewById(R.id.listview_feed);
+        feed_list.setAdapter(adapter);
 
         return rootView;
     }
@@ -164,7 +169,8 @@ public class FeedSearchFragment extends Fragment {
             if(results != null){
                 adapter.clear();
                 for(String feed: results){
-                    adapter.add(feed);
+                    SpannableString content = new SpannableString(feed);
+                    adapter.add(Html.fromHtml(content.toString()).toString());
                     Log.i(LOG_TAG, "Searh Result: " + feed);
                 }
             }

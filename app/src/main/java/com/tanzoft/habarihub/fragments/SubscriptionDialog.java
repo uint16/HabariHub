@@ -33,7 +33,7 @@ public class SubscriptionDialog extends DialogFragment {
         final EditText sourceName = (EditText) view.findViewById(R.id.search_feed);
 
         builder.setView(view)
-                .setPositiveButton(R.string.add, new DialogInterface.OnClickListener() {
+                .setPositiveButton(R.string.search, new DialogInterface.OnClickListener() {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

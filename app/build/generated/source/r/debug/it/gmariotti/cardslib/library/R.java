@@ -170,9 +170,9 @@ public final class R {
 		public static final int list_card_undo_items = 0x7f0c0001;
 	}
 	public static final class string {
-		public static final int card_empty_cardwithlist_text = 0x7f0d0015;
-		public static final int card_progressbar_cardwithlist_text = 0x7f0d0016;
-		public static final int list_card_undo_title = 0x7f0d0024;
+		public static final int card_empty_cardwithlist_text = 0x7f0d0014;
+		public static final int card_progressbar_cardwithlist_text = 0x7f0d0015;
+		public static final int list_card_undo_title = 0x7f0d0023;
 	}
 	public static final class style {
 		public static final int card = 0x7f0e008e;
