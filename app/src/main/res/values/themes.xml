@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- the theme applied to the application or activity -->
+    <style name="HabariHubActionBarTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle"> @style/HabariHubActionBar</item>
+
+        <!-- Support Library Compatibility -->
+
+        <item name="actionBarStyle">@style/HabariHubActionBar</item>
+    </style>
+
+    <style name="LightTheme" parent="Theme.AppCompat.Light">
+        
+    </style>
+
+    <style name="HabariHubActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/actionbar_background</item>
+
+        <!-- Support Library Compatibility -->
+
+        <item name="background">@drawable/actionbar_background</item>
+    </style>
+
+</resources>

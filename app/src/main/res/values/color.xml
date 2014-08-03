@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="drawerBackground">#222222 </color>
+    <color name="habarihubactionbar">#474747</color>
+    <color name="drawer_text_color">#FFFFFF</color>
+    <color name="drawer_item_selected">#0895c4</color>
+    <color name="play">#f4842d</color>
+    <color name="golden">#f2a400</color>
+    <color name="red">#e00707</color>
+    <color name="green">#4ac925</color>
+    <color name="skyblue">#00d5f2</color>
+    <color name="holoblue">#ff33b6ea</color>
+    <color name="cardsblue">#0ab0e8</color>
+    <color name="source_bg">#373737</color>
+    <color name="background_holo_light">#fff3f3f3</color>
+
+</resources>
