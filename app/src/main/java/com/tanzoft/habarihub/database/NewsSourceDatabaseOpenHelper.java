@@ -73,6 +73,24 @@ public class NewsSourceDatabaseOpenHelper extends SQLiteOpenHelper {
 		db.insert(NewsSourceDatabase.DATABASE_TABLE_BLOGS, null, addItemInfo(item));
 	
 	}
+	
+	public void sourceExists(NewsSource item, String category){
+		SQLiteDatabase db = this.getWritableDatabase();
+		String query = "SELECT * FROM * WHERE " + NewsSourceDatabase.COLUMN_LINK + "=" + item.getUrl();
+		Cusror cursor = db.rawQuery(query);
+		
+		if(cursor.getCount() == 0){
+			if(category.equals("Blogs")){
+				addBlog(item);
+			} else if(category.equals("Newspaper")){
+				addNewsPaper(item)
+			} else if(category.equals("Video")){
+				//add youtube subscription if link is valid url
+			}
+		} else {
+			//Toast.makeText(getActivity(), "Source already exists as ", Toast.LENGTH_LONG ).show()
+		}
+	}
 
 	// Getting All blogs from the database
 	public ArrayList<NewsSource> getAllBlogs() {
