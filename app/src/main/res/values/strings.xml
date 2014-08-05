@@ -12,7 +12,13 @@
         <item>Newspapers</item>
         <item>Radio</item>
         <item>Videos</item>
-Visit my Google+ page.Visit my Google+ page.Visit my Google+ page.                <item>About Us</item>
+        <item>About Us</item>
+    </string-array>
+
+    <string-array name="subscription_category">
+        <item>Blogs</item>
+        <item>Newspapers</item>
+        <item>Videos</item>
     </string-array>
 
     <string name="hello_world">Hello world!</string>

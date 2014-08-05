@@ -13,6 +13,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.tanzoft.habarihub.datamodels.NewsSource;
 
@@ -74,22 +75,35 @@ public class NewsSourceDatabaseOpenHelper extends SQLiteOpenHelper {
 	
 	}
 	
-	public void sourceExists(NewsSource item, String category){
+	public void ifSourceExists(NewsSource item, String category){
+
+        String table = null;
+
+        if(category.equals("Blogs")){
+            table = "blogs";
+        } else if(category.equals("Newspaper")){
+            table = "newspaper";
+        } else {
+            table = "video";
+        }
+
 		SQLiteDatabase db = this.getWritableDatabase();
-		String query = "SELECT * FROM * WHERE " + NewsSourceDatabase.COLUMN_LINK + "=" + item.getUrl();
-		Cusror cursor = db.rawQuery(query);
+		String query = "SELECT _url FROM " + table + " WHERE _url = ?";
+		Cursor cursor = db.rawQuery(query, new String[]{item.getUrl()});
 		
 		if(cursor.getCount() == 0){
-			if(category.equals("Blogs")){
+			if(category.equals("blogs")){
 				addBlog(item);
 			} else if(category.equals("Newspaper")){
-				addNewsPaper(item)
+				addNewsPaper(item);
 			} else if(category.equals("Video")){
 				//add youtube subscription if link is valid url
 			}
 		} else {
-			//Toast.makeText(getActivity(), "Source already exists as ", Toast.LENGTH_LONG ).show()
+			Toast.makeText(context, "Source already exists as ", Toast.LENGTH_LONG).show();
+            return;
 		}
+        Toast.makeText(context, "Source Added", Toast.LENGTH_LONG).show();
 	}
 
 	// Getting All blogs from the database

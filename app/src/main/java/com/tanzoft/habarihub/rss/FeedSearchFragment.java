@@ -19,6 +19,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.tanzoft.habarihub.R;
+import com.tanzoft.habarihub.database.NewsSourceDatabaseOpenHelper;
+import com.tanzoft.habarihub.datamodels.NewsSource;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -70,7 +72,18 @@ public class FeedSearchFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String source = feedEntry.get(position);
                 String[] temp = source.split("%");
-                Toast.makeText(getActivity(), temp[0], Toast.LENGTH_LONG).show();
+                String displayName = Html.fromHtml(new SpannableString(temp[1]).toString()).toString();
+                String url = temp[0];
+                NewsSource news = null;
+                try {
+                    news = new NewsSource(displayName, url);
+                } catch (Exception e) {
+                    Log.e(LOG_TAG, "News Source Errror: ", e);
+                }
+
+                NewsSourceDatabaseOpenHelper nsdo = new NewsSourceDatabaseOpenHelper(getActivity());
+                nsdo.ifSourceExists(news, "Blogs");
+              //  Toast.makeText(getActivity(), temp[0], Toast.LENGTH_LONG).show();
             }
         });
 
