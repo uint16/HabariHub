@@ -92,7 +92,7 @@ public class NewsSourceDatabaseOpenHelper extends SQLiteOpenHelper {
 		Cursor cursor = db.rawQuery(query, new String[]{item.getUrl()});
 		
 		if(cursor.getCount() == 0){
-			if(category.equals("blogs")){
+			if(category.equals("Blogs")){
 				addBlog(item);
 			} else if(category.equals("Newspaper")){
 				addNewsPaper(item);
@@ -100,7 +100,7 @@ public class NewsSourceDatabaseOpenHelper extends SQLiteOpenHelper {
 				//add youtube subscription if link is valid url
 			}
 		} else {
-			Toast.makeText(context, "Source already exists as ", Toast.LENGTH_LONG).show();
+			Toast.makeText(context, "Source already exists", Toast.LENGTH_LONG).show();
             return;
 		}
         Toast.makeText(context, "Source Added", Toast.LENGTH_LONG).show();

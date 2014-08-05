@@ -168,17 +168,23 @@ public class FeedSearchFragment extends Fragment {
             final String URL = "url";
             final String TITLE = "title";
             final String RESPONSE_DATA = "responseData";
+            final String RESPONSE_STATUS = "responseStatus";
             final String SEPARATOR = "%";
             JSONObject feedObject;
             JSONArray feedResults;
+            String[] res = null;
 
 
                 feedObject = new JSONObject(feedsJSON);
+
+            if(feedObject.getString(RESPONSE_STATUS).equals("404")){
+                //do nothing for now, Invalid result data
+            } else {
                 feedObject = feedObject.getJSONObject(RESPONSE_DATA);
                 feedResults = feedObject.getJSONArray(ENTRIES);
-                String[] res = new String[feedResults.length()];
+                res = new String[feedResults.length()];
 
-                for(int i = 0; i < feedResults.length(); i++){
+                for (int i = 0; i < feedResults.length(); i++) {
                     JSONObject obj = feedResults.getJSONObject(i);
                     String url = obj.getString(URL);
                     String title = obj.getString(TITLE);
@@ -186,7 +192,7 @@ public class FeedSearchFragment extends Fragment {
                     res[i] = title;
                     feedEntry.add(url + SEPARATOR + title);
                 }
-
+            }
             return res;
         }
 
@@ -197,14 +203,14 @@ public class FeedSearchFragment extends Fragment {
                 for(String feed: results){
                     SpannableString content = new SpannableString(feed);
                     adapter.add(Html.fromHtml(content.toString()).toString());
-                    Log.i(LOG_TAG, "Searh Result: " + feed);
                 }
+            } else {
+                Toast.makeText(getActivity(), "Couldn't get results now!! :(", Toast.LENGTH_LONG).show();
+                return;
             }
 
             ArrayList<String> feeds = new ArrayList<String>(Arrays.asList(results));
             adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_feed_result, R.id.list_item_feed_textview, feeds);
-
-            Log.e(LOG_TAG, "Adapter Status: " + adapter.isEmpty());
         }
     }
 }
