@@ -44,7 +44,7 @@
     <string name="radio_greeting">Karibu</string>
     <string name="credits">LIBRARIES\nActionBarSherlock\nFading Action Bar\nCards UI\n\nCODE\nMedia Player - Roger Cotrina</string>
     <string name="about_github">Please contact developer(s) for source code</string>
-    <string name="start_disclaimer">By selecting start using habarihub you agree to terms and conditions,and permissions requested by this app.</string>
+    <string name="start_disclaimer">By selecting start using Habari Hub you agree to terms and conditions,and permissions requested by this app.</string>
     <string name="about_start">Thank you for downloading our app. Here is a quick tutorial how to use HabariHub:\n\n1.Select a category e.g. Newspapers\n2.Select a source e.g. Mwananchi\n3.Select article\n4.SWIPE between articles, right for older, left for newer\n5Share article with friends\n\nDo not forget to rate HabariHub on playstore, and use the report menu to report bugs/suggestions and we will work on them</string>
     <string name="about_text">Habari Hub is a lightweight app created to integrate major Tanzania news sources into one place. We are NOT affiliated to any source used in this app</string>
     <string name="main_test">Thank you for being part of this app, as of now this app is in early development stages. Timeline for this app is as follows:\n1st June 2013 \- Alpha Release\n1st July 2013 \- Beta Release\n1st August 2013 \- Final Release.\nAlmost everything right now is in webView but we are working hard to bring everything native. \nNB: Dates are subject to change at any given time.</string>
@@ -57,6 +57,6 @@
     <string name="cancel">Cancel</string>
     <string name="station_picker_prompt">Choose a Radio Station</string>
     <string name="title_activity_feed_search">FeedSearch</string>
-    <string name="dialog_warning_text">This feature is under developent, but for the time being the FIRST results is likely what you need</string>
+    <string name="dialog_warning_text">This feature is under development, but for the time being the FIRST results is likely what you need</string>
 
 </resources>
