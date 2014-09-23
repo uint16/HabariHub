@@ -27,9 +27,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mediaplayer.MediaActivity"
-            android:parentActivityName=".HabariHubMainActivity"
-            >
+        <activity
+            android:name=".mediaplayer.MediaActivity"
+            android:parentActivityName=".HabariHubMainActivity" >
         </activity>
 
         <service android:name=".mediaplayer.MediaPlayerService" />
@@ -56,6 +56,10 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.tanzoft.habarihub.HabariHubMainActivity" />
+        </activity>
+        <activity
+            android:name=".MainActivityTabbed"
+            android:label="@string/title_activity_main_activity_tabbed" >
         </activity>
     </application>
 

@@ -14,7 +14,6 @@
         <item>Videos</item>
         <item>About Us</item>
     </string-array>
-
     <string-array name="subscription_category">
         <item>Blogs</item>
         <item>Newspapers</item>
@@ -58,5 +57,9 @@
     <string name="station_picker_prompt">Choose a Radio Station</string>
     <string name="title_activity_feed_search">FeedSearch</string>
     <string name="dialog_warning_text">This feature is under development, but for the time being the FIRST results is likely what you need</string>
+    <string name="title_activity_main_activity_tabbed">Habari Hub</string>
+    <string name="title_read">Read</string>
+    <string name="title_listen">Listen</string>
+    <string name="title_watch">Watch</string>
 
 </resources>
