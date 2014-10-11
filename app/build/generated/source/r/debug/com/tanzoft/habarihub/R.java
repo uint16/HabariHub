@@ -1181,9 +1181,9 @@ containing a value of this type.
         public static final int title_activity_main=0x7f0c0041;
         public static final int title_activity_main_activity_tabbed=0x7f0c0042;
         public static final int title_activity_settings=0x7f0c0043;
-        public static final int title_section1=0x7f0c0044;
-        public static final int title_section2=0x7f0c0045;
-        public static final int title_section3=0x7f0c0046;
+        public static final int title_listen=0x7f0c0044;
+        public static final int title_read=0x7f0c0045;
+        public static final int title_watch=0x7f0c0046;
         public static final int view_story=0x7f0c0047;
         public static final int visit_google_plus=0x7f0c0048;
     }

@@ -2,6 +2,18 @@
 <pre-dex-items>
 
     <item
+        dex="/Users/Damas/AndroidStudioProjects/HabariHub/app/build/intermediates/pre-dexed/debug/classes-38224fa08f156f9ff44df56f8ed827d4865185c2.jar"
+        jar="/Users/Damas/AndroidStudioProjects/HabariHub/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef"/>
+    <item
+        dex="/Users/Damas/AndroidStudioProjects/HabariHub/app/build/intermediates/pre-dexed/debug/classes-e3530cad653973f85430bcc7d820f05af87dfac4.jar"
+        jar="/Users/Damas/AndroidStudioProjects/HabariHub/app/build/intermediates/exploded-aar/com.android.support/support-v13/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e128103d5281ddd26195a7f980b36d0d005a4e56"/>
+    <item
         dex="/Users/Damas/AndroidStudioProjects/HabariHub/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-bca9cd8c8082330ef7549e0398af852faae531fd.jar"
         jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
         jumboMode="false"
@@ -14,16 +26,16 @@
         revision="20.0.0"
         sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
     <item
-        dex="/Users/Damas/AndroidStudioProjects/HabariHub/app/build/intermediates/pre-dexed/debug/classes-38224fa08f156f9ff44df56f8ed827d4865185c2.jar"
-        jar="/Users/Damas/AndroidStudioProjects/HabariHub/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/classes.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef"/>
-    <item
         dex="/Users/Damas/AndroidStudioProjects/HabariHub/app/build/intermediates/pre-dexed/debug/classes-eb80e48fefc8ea1092f40fa54f337f2e43f1ded8.jar"
         jar="/Users/Damas/AndroidStudioProjects/HabariHub/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+    <item
+        dex="/Users/Damas/AndroidStudioProjects/HabariHub/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-5400405cdfbd664ba683a4aec0e89b4b34c2f75d.jar"
+        jar="/Users/Damas/AndroidStudioProjects/HabariHub/app/build/intermediates/exploded-aar/com.android.support/support-v13/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="27bbd3982cdfe4468a9bf99c8c773734a9049e33"/>
 
 </pre-dex-items>

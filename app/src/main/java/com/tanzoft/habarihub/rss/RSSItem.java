@@ -1,26 +1,73 @@
 package com.tanzoft.habarihub.rss;
 
 /**
- * Created by Damas on 9/22/14.
+ * A representation of a single rss feed item(a post)
+ *
+ * @author  Newton Bujiku
+ * @since July,2014
  */
 public class RSSItem {
 
-    private String title;
-    private String link;
 
-    public void setTitle(String _title){
-        this.title = _title;
+
+    private String title;//title of the post
+    private String description;//a description contained in the post
+    private String postUrl;//a url pointing to the post
+    private String pubDate;//a date of publication
+    private String author;//author of the post
+    private String imageUrl;//url of the image within the post
+
+
+    public RSSItem(){
+
     }
 
-    public void setLink(String _link) {
-        this.link = _link;
-    }
-
+    //getters and setters for all fields
     public String getTitle() {
         return title;
     }
 
-    public String getLink() {
-        return link;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getPostUrl() {
+        return postUrl;
+    }
+
+    public void setPostUrl(String postUrl) {
+        this.postUrl = postUrl;
+    }
+
+    public String getPubDate() {
+        return pubDate;
+    }
+
+    public void setPubDate(String pubDate) {
+        this.pubDate = pubDate;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

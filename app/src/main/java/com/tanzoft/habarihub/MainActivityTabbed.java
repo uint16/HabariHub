@@ -18,6 +18,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.tanzoft.habarihub.fragments.CreditsFragment;
+import com.tanzoft.habarihub.fragments.HabariHubFragmentHandler;
+
 
 public class MainActivityTabbed extends Activity implements ActionBar.TabListener {
 
@@ -74,6 +77,8 @@ public class MainActivityTabbed extends Activity implements ActionBar.TabListene
                             .setText(mSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
         }
+
+
     }
 
 
@@ -100,11 +105,13 @@ public class MainActivityTabbed extends Activity implements ActionBar.TabListene
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
         // When the given tab is selected, switch to the corresponding page in
         // the ViewPager.
+
         mViewPager.setCurrentItem(tab.getPosition());
     }
 
     @Override
     public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+
     }
 
     @Override
@@ -177,7 +184,7 @@ public class MainActivityTabbed extends Activity implements ActionBar.TabListene
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main_tabbed, container, false);
+            View rootView = inflater.inflate(R.layout.activity_player, container, false);
             return rootView;
         }
     }

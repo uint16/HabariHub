@@ -148,7 +148,8 @@ public class HabariHubMainActivity extends ActionBarActivity {
                         break;
 
                     case 3:
-                        showFragment(pos);
+                        Intent tabbed = new Intent(HabariHubMainActivity.this, MainActivityTabbed.class);
+                        startActivity(tabbed);
                         break;
 
                     case 4:
